@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Huh → Oh: learn how computers work by building them</title>
+    <meta name="description" content="A free, from-scratch curriculum: seven languages, the machine underneath, and the systems that train and serve AI." />
+    <script>
+      // Applies the saved scheme before first paint, so a saved Night choice never flashes Day.
+      try {
+        var saved = localStorage.getItem('huhoh-color-scheme')
+        if (saved === 'light' || saved === 'dark' || saved === 'system') document.documentElement.setAttribute('data-color-scheme', saved)
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
