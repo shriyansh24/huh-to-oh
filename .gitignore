@@ -1,5 +1,5 @@
-# dependencies
-node_modules/
+# dependencies (no trailing slash, so a symlinked node_modules is ignored too)
+node_modules
 
 # build output (the live site is published from the gh-pages branch)
 dist/
