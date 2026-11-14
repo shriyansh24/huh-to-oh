@@ -22,11 +22,13 @@ export function Hero() {
         </a>
         <nav aria-label="Main" className="flex flex-wrap items-center gap-1.5">
           {['The line', 'Papers lab', 'Glossary'].map((label) => (
-            <Soon key={label} className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk, 'hover:bg-transparent')}>
+            <Soon key={label} stampClassName="max-[1279px]:hidden" className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk, 'hover:bg-transparent')}>
               {label}
             </Soon>
           ))}
-          <Soon className={cn(buttonVariants({ variant: 'pill', size: 'pill' }), 'hover:bg-sheet')}>Search</Soon>
+          <Soon stampClassName="max-[1279px]:hidden" className={cn(buttonVariants({ variant: 'pill', size: 'pill' }), 'hover:bg-sheet')}>
+            Search
+          </Soon>
           <ThemeToggle />
         </nav>
       </header>
@@ -44,11 +46,11 @@ export function Hero() {
           <Soon stamp="corner" className={soonButton('solid')}>
             Start at the bit
           </Soon>
-          <Soon stamp="corner" className={cn(soonButton('outline'), heroInk)}>
+          <Soon stamp="corner" className={cn(soonButton('outline'), 'border-ink bg-sheet text-ink hover:bg-sheet')}>
             Find your station
           </Soon>
         </div>
-        <p className={cn('m-0 font-hand text-[clamp(14px,1.15vw,17px)] font-bold', heroInk)}>Being written now. Every station opens when its lessons are checked.</p>
+        <p className="m-0 self-start rounded-[3px] bg-sheet/90 px-2 py-0.5 font-hand text-[clamp(14px,1.15vw,17px)] font-bold text-ink">Being written now. Every station opens when its lessons are checked.</p>
       </div>
     </section>
   )

@@ -20,10 +20,10 @@ export function SoonStamp({ className, hidden }: { className?: string; hidden?: 
   )
 }
 
-type SoonProps = { children: ReactNode; className?: string; stamp?: 'inline' | 'corner' }
+type SoonProps = { children: ReactNode; className?: string; stamp?: 'inline' | 'corner'; stampClassName?: string }
 
 /** A nav item or call to action that isn't live yet. Announced as "<label>, coming soon", focusable, inert. */
-export function Soon({ children, className, stamp = 'inline' }: SoonProps) {
+export function Soon({ children, className, stamp = 'inline', stampClassName }: SoonProps) {
   return (
     <span
       role="link"
@@ -34,7 +34,7 @@ export function Soon({ children, className, stamp = 'inline' }: SoonProps) {
     >
       <span>{children}</span>
       <span className="sr-only">, coming soon</span>
-      <SoonStamp hidden className={stamp === 'corner' ? 'absolute -right-3 -top-3.5' : undefined} />
+      <SoonStamp hidden className={cn(stamp === 'corner' && 'absolute -right-3 -top-3.5', stampClassName)} />
     </span>
   )
 }
