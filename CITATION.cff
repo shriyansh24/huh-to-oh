@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use or build on this project, please cite it like this."
+title: "Huh → Oh: learn how computers work by building them"
+type: software
+authors:
+  - family-names: Singh
+    given-names: Shriyansh
+repository-code: "https://github.com/shriyansh24/huh-to-oh"
+url: "https://shriyansh24.github.io/huh-to-oh/"
+license: MIT
+version: 0.1.0
+date-released: 2026-11-14
+keywords:
+  - curriculum
+  - computer science
+  - systems
+  - machine learning
+  - free education
+abstract: >-
+  A free, from-scratch curriculum for learning how computers work by building
+  them, from one bit to a model in production. Work in progress: the home page
+  is built and every lesson is coming soon.
