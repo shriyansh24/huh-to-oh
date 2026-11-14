@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Huh? Not on the line · Huh → Oh</title>
+    <meta name="description" content="This page isn't on the line. Draw the missing track and the train will take you home." />
+    <meta name="robots" content="noindex" />
+    <script>
+      // Applies the saved scheme before first paint, so a saved Night choice never flashes Day.
+      try {
+        var saved = localStorage.getItem('huhoh-color-scheme')
+        if (saved === 'light' || saved === 'dark' || saved === 'system') document.documentElement.setAttribute('data-color-scheme', saved)
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript><p style="font-family: system-ui; padding: 24px">Huh? This page isn't on the line. <a href="https://shriyansh24.github.io/huh-to-oh/">Go to the home page</a>.</p></noscript>
+    <script type="module" src="/src/notfound/main.tsx"></script>
+  </body>
+</html>
