@@ -4,7 +4,8 @@
   "description": "The crayon drawings on the home page, drawn stroke by stroke in JavaScript.",
   "scripts": {
     "hero": "node soul.js 2560 && node soul.js 2560 day",
-    "line": "node line.js day && node line.js night"
+    "line": "node line.js day && node line.js night",
+    "lost": "node lost.js day && node lost.js night"
   },
   "dependencies": {
     "@napi-rs/canvas": "^1.1.1"

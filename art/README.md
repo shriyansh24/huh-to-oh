@@ -6,6 +6,7 @@
 |---|---|
 | `kit.js` | The kit: paper tooth, crayon marks, wobbly lines, and layers laid down through the grain |
 | `soul.js` | The hero, "the page that runs": a notebook diagram (one bit, a gate, a register, an adder) whose pencil line becomes a railway and climbs into a cut-paper landscape |
+| `lost.js` | The 404 picture, "off the map": the page torn through, the railway stopping at the tear, and the line carrying on to a town on the far side (with a cow). The gap is left empty so the 404 page can let the reader draw the missing track. It also writes `lost-geometry.json`, the rail ends and the far-side track the page's train runs on |
 | `line.js` | The long drawing under the hero: the railway down the page, the 30 stations, a small drawing per station and the cut-paper scenes between parts. It also writes `layout-<mode>.json`, the station positions the page uses to place its cards |
 
 ## Run
@@ -15,7 +16,10 @@ cd art
 npm install
 npm run hero   # out/soul-2560.png (night) and out/soul-day-2560.png
 npm run line   # out/line-day.*, out/line-night.*, out/layout-day.json, out/layout-night.json
+npm run lost   # out/lost-day.jpg, out/lost-night.jpg, out/lost-geometry.json
 ```
+
+`lost.js` output is copied as is: `out/lost-*.jpg` into `src/assets`, `out/lost-geometry.json` into `src/data`.
 
 `line.js` reads `../src/data/stations-full.json`. When the station list changes, re-run it and copy `out/layout-day.json` and `out/line-*.jpg` into `src/data` and `src/assets`, because the positions are baked into the picture.
 
