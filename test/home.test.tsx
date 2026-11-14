@@ -66,18 +66,27 @@ describe('stations', () => {
   })
 })
 
-describe('search', () => {
-  test('finds TypeScript and opens its station', async () => {
+describe('coming soon', () => {
+  test('every nav item and call to action is announced as coming soon and goes nowhere', async () => {
+    render(<App />)
+    await tick()
+    for (const label of ['The line', 'Papers lab', 'Glossary', 'Search', 'Start at the bit', 'Find your station']) {
+      const el = screen.getByRole('link', { name: `${label}, coming soon` })
+      expect(el).toHaveAttribute('aria-disabled', 'true')
+      expect(el).not.toHaveAttribute('href')
+    }
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  test('every module row in an open station is marked soon', async () => {
     const user = userEvent.setup()
     render(<App />)
     await tick()
-    await user.click(screen.getAllByRole('button', { name: /^Search/ })[0])
-    const input = await screen.findByRole('combobox', { name: 'Search stations and modules' })
-    await user.type(input, 'TypeScript')
-    await user.keyboard('{Enter}')
-    await tick()
-    const ts = trigger('TypeScript')
-    expect(ts).toHaveAttribute('aria-expanded', 'true')
+    const rust = trigger('Rust')
+    await user.click(rust)
+    const panel = document.getElementById(rust.getAttribute('aria-controls')!)!
+    const rows = within(panel).getAllByRole('listitem')
+    for (const row of rows) expect(within(row).getByText('soon')).toBeInTheDocument()
   })
 })
 

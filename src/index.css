@@ -141,21 +141,12 @@ body {
   font-weight: 700;
 }
 
-.row-flash {
-  animation: row-flash 1.6s ease;
-}
-@keyframes row-flash {
-  0%, 40% { background: color-mix(in srgb, var(--accent) 22%, transparent); }
-  100% { background: transparent; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   [data-slot="accordion-panel"],
   [data-slot="dialog-backdrop"],
   [data-slot="dialog-content"],
   .station-card { transition: none; }
-  .row-flash { animation: none; outline: 2px solid var(--accent); }
 }
 
 /* Below 900px the absolutely placed cards become one column in reading order, over the drawing. */

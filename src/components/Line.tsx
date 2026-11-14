@@ -6,11 +6,12 @@ import {
   AccordionTrigger,
 } from '@ui-sdk/react/accordion'
 import { motion } from 'motion/react'
-import { useEffect, useRef, type KeyboardEvent } from 'react'
+import { useRef, type KeyboardEvent } from 'react'
 import lineDay from '../assets/line-day.jpg'
 import lineNight from '../assets/line-night.jpg'
 import { BANDS, CURRENT, END, H, PART_COPY, STATIONS, W, pctX, pctY, stationsInBand, type StationView } from '../lib/data'
 import { cn } from '../lib/cn'
+import { SoonStamp } from './Soon'
 
 const LINE_ALT =
   'The notebook page continues as one long crayon drawing. The pencil line from the top of the page becomes a railway that winds down past 30 stations. Between groups of stations, cut-paper scenes stand up off the page: a small station with a clock, hills with a tunnel and seven houses, a city of chips with telephone poles, an observatory under wired stars, a river crossed by a red bridge with paper planes overhead, and at the bottom a hilltop town where the line ends. Each station has its own small drawing: a signpost, a punch card, a logic gate, a house for each language, a gear, two tin cans on a string, a chip, a database drum, a lighthouse, a neural network, a maze, a stack of blocks, a graphics card, an easel and a radio mast.'
@@ -18,15 +19,12 @@ const LINE_ALT =
 const CARD_W = 400
 const TILTS = [-0.6, 0.5, -0.3, 0.7, -0.5, 0.4]
 
-export type Highlight = { key: string; rowIndex: number; nonce: number } | null
-
 type LineProps = {
   open: string | null
   onOpenChange: (key: string | null) => void
-  highlight: Highlight
 }
 
-export function Line({ open, onOpenChange, highlight }: LineProps) {
+export function Line({ open, onOpenChange }: LineProps) {
   const items: { y: number; node: React.ReactNode }[] = []
 
   BANDS.forEach((b, i) => {
@@ -60,7 +58,7 @@ export function Line({ open, onOpenChange, highlight }: LineProps) {
   })
 
   STATIONS.forEach((s) => {
-    items.push({ y: s.y, node: <StationItem key={s.key} s={s} open={open === s.key} onClose={() => onOpenChange(null)} highlight={highlight} /> })
+    items.push({ y: s.y, node: <StationItem key={s.key} s={s} open={open === s.key} onClose={() => onOpenChange(null)} /> })
   })
 
   items.push({
@@ -104,29 +102,11 @@ export function Line({ open, onOpenChange, highlight }: LineProps) {
   )
 }
 
-function StationItem({ s, open, onClose, highlight }: { s: StationView; open: boolean; onClose: () => void; highlight: Highlight }) {
+function StationItem({ s, open, onClose }: { s: StationView; open: boolean; onClose: () => void }) {
   const isCurrent = s.index === CURRENT
   const left = s.side === 'left' ? s.x - 36 - CARD_W : s.x + 36
   const tilt = TILTS[s.order % TILTS.length]
   const triggerRef = useRef<HTMLButtonElement>(null)
-  const listRef = useRef<HTMLOListElement>(null)
-  const flash = highlight && highlight.key === s.key ? highlight : null
-
-  useEffect(() => {
-    if (!open || !flash) return
-    const t = window.setTimeout(() => {
-      const row = listRef.current?.children[flash.rowIndex] as HTMLElement | undefined
-      triggerRef.current?.closest('[data-slot="accordion-item"]')?.scrollIntoView({ block: 'start', behavior: 'smooth' })
-      if (row) {
-        row.scrollIntoView({ block: 'nearest' })
-        row.classList.remove('row-flash')
-        void row.offsetWidth
-        row.classList.add('row-flash')
-      }
-    }, 260)
-    return () => window.clearTimeout(t)
-  }, [open, flash])
-
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Escape' && open) {
       e.stopPropagation()
@@ -153,12 +133,12 @@ function StationItem({ s, open, onClose, highlight }: { s: StationView; open: bo
               <span className="font-mono text-[12.5px] font-normal text-ink2">
                 Station {s.order + 1} · {s.mods.length} {s.noun}
               </span>
-              {isCurrent && <span className="font-hand text-[15px] font-bold text-now">you are here</span>}
+              {isCurrent ? <span className="font-hand text-[15px] font-bold text-now">you are here</span> : <SoonStamp />}
             </span>
             <span className="font-display text-[22px] font-bold leading-[1.15]">{s.name}</span>
             <span className="font-reading text-[15.5px] font-normal leading-[1.45] text-ink2">{s.about}</span>
             <span className="mt-1 flex items-center gap-1.5 text-[14.5px] font-bold text-accent">
-              {open ? 'Hide the list' : `Show every ${s.noun === 'papers' ? 'paper' : 'module'}`}
+              {open ? 'Hide the list' : `See every ${s.noun === 'papers' ? 'paper' : 'module'} on the way`}
               <motion.span aria-hidden="true" className="inline-block" animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
                 ↓
               </motion.span>
@@ -168,11 +148,11 @@ function StationItem({ s, open, onClose, highlight }: { s: StationView; open: bo
       </AccordionHeader>
       <AccordionPanel aria-label={`${s.name} ${s.noun}`}>
         <div className="mt-1.5 max-h-[440px] overflow-y-auto rounded-card border-[1.5px] border-ink bg-sheet px-4 pb-2.5 pt-1" style={{ boxShadow: '4px 6px 0 var(--shadow)' }}>
-          <ol ref={listRef} className="m-0 list-none p-0">
+          <ol className="m-0 list-none p-0">
             {s.mods.map((m, i) => (
               <motion.li
                 key={`${m.id}-${m.title}`}
-                className="grid grid-cols-[54px_minmax(0,1fr)] gap-2.5 border-t border-rule py-2.5 first:border-t-0"
+                className="grid grid-cols-[54px_minmax(0,1fr)_auto] items-start gap-2.5 border-t border-rule py-2.5 first:border-t-0"
                 initial={open ? { opacity: 0, y: -4 } : false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.18, delay: Math.min(i, 14) * 0.018 }}
@@ -182,6 +162,7 @@ function StationItem({ s, open, onClose, highlight }: { s: StationView; open: bo
                   <span className="text-[15px] font-bold leading-[1.3]">{m.title}</span>
                   {m.about && <span className="font-reading text-[14.5px] leading-[1.45] text-ink2">{m.about}</span>}
                 </span>
+                <span className="pt-0.5 font-mono text-[11.5px] text-now">soon</span>
               </motion.li>
             ))}
           </ol>

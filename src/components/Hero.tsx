@@ -1,22 +1,17 @@
-import { DialogShortcut, DialogTrigger } from '@ui-sdk/react/dialog'
-import type { SearchController } from '../lib/search'
 import heroDay from '../assets/page-day.jpg'
 import heroNight from '../assets/page-night.jpg'
-import { STATIONS } from '../lib/data'
+import { Soon, soonButton } from './Soon'
 import { ThemeToggle } from './ThemeToggle'
-import { Button, buttonVariants } from './ui/button'
+import { buttonVariants } from './ui/button'
 import { cn } from '../lib/cn'
 
 const HERO_ALT =
   'A crayon drawing of an open notebook at dusk: a pencil diagram of one bit, a gate, a register and an adder turns into railway track, and a small train climbs off the page into hills toward a hilltop town, under stars wired like a small network'
 
-const papers = STATIONS.find((s) => s.noun === 'papers')!
-const first = STATIONS[0]
-
 // Hero text sits on the drawing, not on a token surface: dark ink on the day sky, pale ink on the night sky.
 const heroInk = 'text-[#26231B] dark:text-[#F4EEE3] [text-shadow:0_0_8px_rgb(253_249_233/0.9),0_0_2px_rgb(253_249_233/0.9)] dark:[text-shadow:0_0_8px_rgb(20_18_30/0.9),0_0_2px_rgb(20_18_30/0.95)]'
 
-export function Hero({ search }: { search: SearchController }) {
+export function Hero() {
   return (
     <section aria-label="Welcome" className="relative aspect-[16/9] w-full overflow-hidden max-[899px]:flex max-[899px]:aspect-auto max-[899px]:flex-col max-[899px]:gap-6 max-[899px]:pb-10">
       <img src={heroDay} alt={HERO_ALT} className="day-only absolute inset-0 block h-full w-full object-cover" />
@@ -26,19 +21,12 @@ export function Hero({ search }: { search: SearchController }) {
           Huh → Oh
         </a>
         <nav aria-label="Main" className="flex flex-wrap items-center gap-1.5">
-          <a href="#line" className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk)}>
-            The line
-          </a>
-          <a href={`#${papers.key}`} className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk)}>
-            Papers lab
-          </a>
-          <span role="link" aria-disabled="true" className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk, 'cursor-not-allowed opacity-80 hover:bg-transparent')}>
-            Glossary <span className="font-mono text-[11px] font-normal">coming soon</span>
-          </span>
-          <DialogTrigger controller={search} shortcut="mod+k" className={buttonVariants({ variant: 'pill', size: 'pill' })}>
-            Search
-            <DialogShortcut className="font-mono text-[12px] font-normal text-ink2" />
-          </DialogTrigger>
+          {['The line', 'Papers lab', 'Glossary'].map((label) => (
+            <Soon key={label} className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), heroInk, 'hover:bg-transparent')}>
+              {label}
+            </Soon>
+          ))}
+          <Soon className={cn(buttonVariants({ variant: 'pill', size: 'pill' }), 'hover:bg-sheet')}>Search</Soon>
           <ThemeToggle />
         </nav>
       </header>
@@ -52,12 +40,15 @@ export function Hero({ search }: { search: SearchController }) {
         <p className={cn('m-0 max-w-[46ch] font-reading text-[clamp(16px,1.35vw,20px)] leading-normal', heroInk)}>
           Learn how computers work by building them, from one bit to a model in production. Seven languages, the machine underneath, and the systems that train and serve AI. Free, and from scratch.
         </p>
-        <div className="flex flex-wrap gap-2.5">
-          <Button render={<a href={`#${first.key}`} />}>Start at the bit</Button>
-          <DialogTrigger controller={search} className={cn(buttonVariants({ variant: 'outline' }), heroInk)}>
+        <div className="flex flex-wrap gap-x-6 gap-y-5 pt-1">
+          <Soon stamp="corner" className={soonButton('solid')}>
+            Start at the bit
+          </Soon>
+          <Soon stamp="corner" className={cn(soonButton('outline'), heroInk)}>
             Find your station
-          </DialogTrigger>
+          </Soon>
         </div>
+        <p className={cn('m-0 font-hand text-[clamp(14px,1.15vw,17px)] font-bold', heroInk)}>Being written now. Every station opens when its lessons are checked.</p>
       </div>
     </section>
   )

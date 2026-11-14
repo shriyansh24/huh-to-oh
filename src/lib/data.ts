@@ -43,7 +43,7 @@ export const STATIONS: StationView[] = layout.stations.map((p, order) => {
 })
 
 export const PART_COPY: { title: string; body: string }[] = [
-  { title: 'The line, from the bit to the town', body: '30 stations, one for every track, in order. Get on anywhere: open a station to see every module in it and what each one is about.' },
+  { title: 'The line, from the bit to the town', body: '30 stations, one for every track, in order. None are open yet. Open a station to see every module on the way and what each one is about.' },
   { title: 'Languages', body: 'Seven languages, each with its own line of stations, from first steps down to the runtime underneath. Then the same problems solved in all of them, and the languages calling each other.' },
   { title: 'The machine and its systems', body: 'What runs under your code: the CPU and the kernel, the network, databases, many machines agreeing on one answer, and keeping all of it up.' },
   { title: 'Maths and models', body: 'The maths models are made of, then machine learning from a straight line to large language models, the GPUs that serve them, and what can go wrong.' },
