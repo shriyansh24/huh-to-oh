@@ -1,0 +1,1678 @@
+[
+ {
+  "part": "Start here",
+  "name": "How to use this",
+  "about": "Two ways in: learn from zero, or add a language you don't know yet.",
+  "mods": [
+   {
+    "id": "M00",
+    "title": "How to use this publication (languages edition)",
+    "about": "Who this is for, how lessons work, and how to pick a language route.",
+    "src": "poly"
+   },
+   {
+    "id": "M00",
+    "title": "How to use this publication (systems and AI edition)",
+    "about": "Who this is for, how lessons work, and how to pick a route through systems and AI.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Computing foundations",
+  "about": "Bits, how a CPU runs a program, the terminal, compilers and Big-O, before any one language.",
+  "mods": [
+   {
+    "id": "A1",
+    "title": "Information",
+    "about": "Bits, numbers, truth, and text",
+    "src": "poly"
+   },
+   {
+    "id": "A2",
+    "title": "How a computer runs a program",
+    "about": "CPU, memory, stack, and heap",
+    "src": "poly"
+   },
+   {
+    "id": "A3",
+    "title": "The programmer's workbench",
+    "about": "Terminal, files, streams, and Git",
+    "src": "poly"
+   },
+   {
+    "id": "A4",
+    "title": "How source code becomes action",
+    "about": "Compilers, interpreters, virtual machines and type systems.",
+    "src": "poly"
+   },
+   {
+    "id": "A5",
+    "title": "Algorithmic thinking",
+    "about": "Problem decomposition, state, and Big-O",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "CS foundations",
+  "about": "From transistors to instructions, data structures, and the tools a working engineer uses.",
+  "mods": [
+   {
+    "id": "A1",
+    "title": "Information: bits, numbers and text",
+    "about": "How 0s and 1s stand for numbers, characters and truth.",
+    "src": "bits"
+   },
+   {
+    "id": "A2",
+    "title": "From transistors to instructions",
+    "about": "Transistors become gates, gates become circuits, circuits run instructions.",
+    "src": "bits"
+   },
+   {
+    "id": "A3",
+    "title": "Programming fundamentals in two languages",
+    "about": "Variables, control flow and functions, written side by side in two languages.",
+    "src": "bits"
+   },
+   {
+    "id": "A4",
+    "title": "Data structures and algorithms",
+    "about": "Arrays, lists, trees, hash tables and graphs, and how to reason about their cost.",
+    "src": "bits"
+   },
+   {
+    "id": "A5",
+    "title": "How code runs: compilers, interpreters, JIT and types",
+    "about": "What happens between your source file and the CPU, and what types promise.",
+    "src": "bits"
+   },
+   {
+    "id": "A6",
+    "title": "The working engineer's toolchain",
+    "about": "Shell, Git, editors, debuggers and build tools, used the way professionals use them.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "part": "Languages",
+  "name": "Python",
+  "about": "First script to CPython's objects, bytecode, free threading and async.",
+  "mods": [
+   {
+    "id": "F0",
+    "title": "Track-wide requirements and Python 3.15 as-of notes",
+    "about": "What the Python track assumes, and which Python version every example was run on.",
+    "src": "poly"
+   },
+   {
+    "id": "F1",
+    "title": "First steps in Python",
+    "about": "Uv, the REPL, variables as names, and primitive types",
+    "src": "poly"
+   },
+   {
+    "id": "F2",
+    "title": "Control flow in Python",
+    "about": "If/elif/else, match, while, for, and functions",
+    "src": "poly"
+   },
+   {
+    "id": "F3",
+    "title": "Built-in collections",
+    "about": "List, tuple, dict, set, and comprehensions",
+    "src": "poly"
+   },
+   {
+    "id": "F4",
+    "title": "Exceptions, context managers (with), and file/stream I/O",
+    "about": "When things go wrong, cleaning up with with, and reading and writing files and streams.",
+    "src": "poly"
+   },
+   {
+    "id": "F5",
+    "title": "Classes, the Python Data Model (dunder methods), and @dataclass",
+    "about": "Your own types, and the special methods that make them behave like built-ins.",
+    "src": "poly"
+   },
+   {
+    "id": "F6",
+    "title": "Iterators, generators (yield), closures, and decorators",
+    "about": "Lazy sequences, functions that remember, and functions that wrap functions.",
+    "src": "poly"
+   },
+   {
+    "id": "F7",
+    "title": "Modern static typing in Python",
+    "about": "Type hints, generics and protocols, and what a type checker can catch.",
+    "src": "poly"
+   },
+   {
+    "id": "F8",
+    "title": "CPython internals I",
+    "about": "PyObject, memory allocators, reference counting, and cyclic GC",
+    "src": "poly"
+   },
+   {
+    "id": "F9",
+    "title": "CPython internals II",
+    "about": "Bytecode, the evaluation loop, the GIL, and Free-Threaded Python",
+    "src": "poly"
+   },
+   {
+    "id": "F10",
+    "title": "Asynchronous Python",
+    "about": "Asyncio, coroutines, event loops, and TaskGroup",
+    "src": "poly"
+   },
+   {
+    "id": "F11",
+    "title": "Descriptors, metaclasses, __init_subclass__, and import mechanics",
+    "about": "How attribute lookup, class creation and import really work.",
+    "src": "poly"
+   },
+   {
+    "id": "F12",
+    "title": "High-performance data & zero-copy memory in Python",
+    "about": "NumPy-style arrays, the buffer protocol and moving data without copying.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "JavaScript",
+  "about": "Values and functions to the engine, the event loop and the browser.",
+  "mods": [
+   {
+    "id": "G1",
+    "title": "First steps in JavaScript",
+    "about": "Runtimes, let/const, primitive types, and equality",
+    "src": "poly"
+   },
+   {
+    "id": "G2",
+    "title": "Control flow in JavaScript",
+    "about": "Conditionals, loops (while, for, for...of), and functions",
+    "src": "poly"
+   },
+   {
+    "id": "G3",
+    "title": "Lexical scope, closures, hoisting, and the this binding rules",
+    "about": "Where a name is visible, what a closure keeps, and what this points to.",
+    "src": "poly"
+   },
+   {
+    "id": "G4",
+    "title": "Objects, prototypes, classes, destructuring, and modules",
+    "about": "Objects and prototypes, class syntax on top of them, and ES modules.",
+    "src": "poly"
+   },
+   {
+    "id": "G5",
+    "title": "Arrays, typed arrays, Map/Set, iterators, and generators",
+    "about": "Ordered data, binary buffers, keyed collections and lazy iteration.",
+    "src": "poly"
+   },
+   {
+    "id": "G6",
+    "title": "Error handling, Promises, async/await, and cancellation",
+    "about": "Errors, Promises and async/await, and how to cancel work in flight.",
+    "src": "poly"
+   },
+   {
+    "id": "G7",
+    "title": "The JavaScript Event Loop",
+    "about": "Call stack, microtasks, macrotasks, and non-blocking I/O",
+    "src": "poly"
+   },
+   {
+    "id": "G8",
+    "title": "Inside V8",
+    "about": "Hidden Classes (Maps), Inline Caches, Elements Kinds, and the JIT pipeline",
+    "src": "poly"
+   },
+   {
+    "id": "G9",
+    "title": "Streams, backpressure, binary protocols, and modern runtimes",
+    "about": "Moving data in chunks without drowning, and parsing bytes on Node, Deno and Bun.",
+    "src": "poly"
+   },
+   {
+    "id": "G10",
+    "title": "Metaprogramming and resource management",
+    "about": "Proxy, Reflect, Symbol, and using",
+    "src": "poly"
+   },
+   {
+    "id": "G11",
+    "title": "Security, memory leaks, and production profiling in JavaScript",
+    "about": "Common JavaScript attacks, finding leaks, and profiling in production.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "TypeScript",
+  "about": "Types as a language of their own: structural typing, generics, and how the checker thinks.",
+  "mods": [
+   {
+    "id": "H1",
+    "title": "First steps in TypeScript",
+    "about": "Type annotations, inference, tsc, and total type erasure",
+    "src": "poly"
+   },
+   {
+    "id": "H2",
+    "title": "Union types, literal types, Discriminated Unions, and Control-Flow Narrowing",
+    "about": "Types that say \"one of these\", and how the checker narrows them as code runs.",
+    "src": "poly"
+   },
+   {
+    "id": "H3",
+    "title": "Structural typing, interface vs. type, top/bottom types (unknown, never), and Variance",
+    "about": "Why TypeScript compares shapes, not names, and what unknown and never are for.",
+    "src": "poly"
+   },
+   {
+    "id": "H4",
+    "title": "Generics, constraints (extends), keyof, typeof, and indexed access types",
+    "about": "Functions and types that work for many types, with limits you choose.",
+    "src": "poly"
+   },
+   {
+    "id": "H5",
+    "title": "Type-level programming",
+    "about": "Mapped Types, Conditional Types, infer, and Template Literal Types",
+    "src": "poly"
+   },
+   {
+    "id": "H6",
+    "title": "Type narrowing power tools",
+    "about": "Satisfies, User-Defined Type Predicates (is), and Assertion Functions",
+    "src": "poly"
+   },
+   {
+    "id": "H7",
+    "title": "TypeScript unsoundness corners, type-system performance, and compiler internals",
+    "about": "Where the type checker can be fooled, why big types get slow, and how tsc works inside.",
+    "src": "poly"
+   },
+   {
+    "id": "H8",
+    "title": "Module resolution, declaration files (.d.ts), monorepo project references, and isolated declarations",
+    "about": "How imports are found, typing other people's JavaScript, and big multi-package repos.",
+    "src": "poly"
+   },
+   {
+    "id": "H9",
+    "title": "End-to-end type safety across network boundaries",
+    "about": "Types that stay correct from the database to the browser.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Go",
+  "about": "Small syntax over a scheduler and a garbage collector you will take apart.",
+  "mods": [
+   {
+    "id": "E1",
+    "title": "First steps in Go",
+    "about": "Go toolchain, package main, variables, and zero values",
+    "src": "poly"
+   },
+   {
+    "id": "E2",
+    "title": "Control flow in Go",
+    "about": "If/else, switch, for (Go's only loop), and defer",
+    "src": "poly"
+   },
+   {
+    "id": "E3",
+    "title": "Pointers, structs, methods, and slices vs. arrays",
+    "about": "Addresses, your own types and methods, and how slices sit on arrays.",
+    "src": "poly"
+   },
+   {
+    "id": "E4",
+    "title": "Maps, hashing, and Go 1.23+ custom iterators",
+    "about": "How Go maps hash, and writing iterators with range-over-func.",
+    "src": "poly"
+   },
+   {
+    "id": "E5",
+    "title": "Interfaces, implicit satisfaction, type assertions, and generics",
+    "about": "Interfaces satisfied without saying so, and generics with constraints.",
+    "src": "poly"
+   },
+   {
+    "id": "E6",
+    "title": "Error handling in Go",
+    "about": "Errors as values, wrapping, panic, and recover",
+    "src": "poly"
+   },
+   {
+    "id": "E7",
+    "title": "Goroutines and the G-M-P scheduler under the hood",
+    "about": "Starting goroutines, and how the scheduler maps them onto OS threads.",
+    "src": "poly"
+   },
+   {
+    "id": "E8",
+    "title": "Channels, select, sync primitives, and context cancellation",
+    "about": "Passing messages, waiting on several at once, and cancelling with context.",
+    "src": "poly"
+   },
+   {
+    "id": "E9",
+    "title": "Memory management in Go",
+    "about": "Escape analysis, the tri-color GC, and pprof",
+    "src": "poly"
+   },
+   {
+    "id": "E10",
+    "title": "Production HTTP services, io.Reader/Writer streaming, and structured logging",
+    "about": "HTTP servers that hold up in production, streaming I/O, and slog.",
+    "src": "poly"
+   },
+   {
+    "id": "E11",
+    "title": "Testing, fuzzing, race detection, and Go workspaces",
+    "about": "Table tests, fuzzing, the race detector, and multi-module workspaces.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Rust",
+  "about": "Ownership and borrowing until the compiler feels like a colleague.",
+  "current": true,
+  "mods": [
+   {
+    "id": "D1",
+    "title": "First steps in Rust",
+    "about": "Cargo, variables, mutability, and scalar types",
+    "src": "poly"
+   },
+   {
+    "id": "D2",
+    "title": "Control flow in Rust",
+    "about": "If expressions, loop/while/for, functions, and match",
+    "src": "poly"
+   },
+   {
+    "id": "D3",
+    "title": "Ownership and moves",
+    "about": "How Rust manages memory without a garbage collector",
+    "src": "poly"
+   },
+   {
+    "id": "D4",
+    "title": "Borrowing, references, slices, and Non-Lexical Lifetimes",
+    "about": "Using a value without owning it, and how the borrow checker decides.",
+    "src": "poly"
+   },
+   {
+    "id": "D5",
+    "title": "Structs, enums, algebraic data types, and error handling",
+    "about": "Data shaped like your problem, and Result and Option instead of exceptions.",
+    "src": "poly"
+   },
+   {
+    "id": "D6",
+    "title": "Collections, iterators, and zero-cost closures",
+    "about": "Vec, HashMap and friends, and iterator chains that compile to plain loops.",
+    "src": "poly"
+   },
+   {
+    "id": "D7",
+    "title": "Generics, traits, static vs. dynamic dispatch, and explicit lifetimes",
+    "about": "Code that works for many types, traits, and when lifetimes must be written out.",
+    "src": "poly"
+   },
+   {
+    "id": "D8",
+    "title": "Smart pointers and interior mutability",
+    "about": "Box, Rc, RefCell and friends: when one owner is not enough.",
+    "src": "poly"
+   },
+   {
+    "id": "D9",
+    "title": "Fearless concurrency",
+    "about": "Threads, Send/Sync, channels, and shared state",
+    "src": "poly"
+   },
+   {
+    "id": "D10",
+    "title": "Asynchronous Rust",
+    "about": "Future, Pin, async/await, and tokio",
+    "src": "poly"
+   },
+   {
+    "id": "D11",
+    "title": "Macros, modules, Cargo workspaces, and API design",
+    "about": "Macros, the module system, multi-crate workspaces, and designing APIs others enjoy.",
+    "src": "poly"
+   },
+   {
+    "id": "D12",
+    "title": "unsafe Rust, Miri, and the Rustonomicon",
+    "about": "What unsafe allows, how Miri checks it, and building safe APIs on top.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "C++",
+  "about": "Memory you manage yourself, and the abstractions built on top of it.",
+  "mods": [
+   {
+    "id": "B1",
+    "title": "First steps in C++",
+    "about": "Toolchains, main, variables, and primitive types",
+    "src": "poly"
+   },
+   {
+    "id": "B2",
+    "title": "Control flow in C++",
+    "about": "Conditionals, loops (while, for), and functions",
+    "src": "poly"
+   },
+   {
+    "id": "B3",
+    "title": "References, pointers, arrays, strings, and views",
+    "about": "Values versus indirection, and the safe ways to point at memory.",
+    "src": "poly"
+   },
+   {
+    "id": "B4",
+    "title": "Structs, classes, RAII, and the Rule of Zero/Five",
+    "about": "Your own types, and tying resource cleanup to object lifetime.",
+    "src": "poly"
+   },
+   {
+    "id": "B5",
+    "title": "Error handling in C++",
+    "about": "Exceptions, error codes, and std::expected",
+    "src": "poly"
+   },
+   {
+    "id": "B6",
+    "title": "Polymorphism",
+    "about": "Inheritance, vtables, vs. std::variant and value polymorphism",
+    "src": "poly"
+   },
+   {
+    "id": "B7",
+    "title": "Ownership and smart pointers",
+    "about": "Unique_ptr, shared_ptr, and weak_ptr",
+    "src": "poly"
+   },
+   {
+    "id": "B8",
+    "title": "Templates, generic programming, constexpr, and C++20 Concepts",
+    "about": "Code generated per type at compile time, and Concepts that constrain it.",
+    "src": "poly"
+   },
+   {
+    "id": "B9",
+    "title": "The STL, iterators, lambdas, and C++20/23 Ranges",
+    "about": "Standard containers and algorithms, lambdas, and composable ranges.",
+    "src": "poly"
+   },
+   {
+    "id": "B10",
+    "title": "Concurrency in C++",
+    "about": "Std::jthread, mutexes, condition variables, and futures",
+    "src": "poly"
+   },
+   {
+    "id": "B11",
+    "title": "C++20 coroutines and C++26 structured concurrency",
+    "about": "Functions that pause and resume, and structured concurrency on top of them.",
+    "src": "poly"
+   },
+   {
+    "id": "B12",
+    "title": "Undefined Behavior, sanitizers, C++20 Modules, and production C++ hardening",
+    "about": "What undefined behaviour really is, catching it, modules, and hardening builds.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Low-level memory, SIMD and lock-free code",
+  "about": "Atomics, memory order, vector instructions and data structures with no locks.",
+  "mods": [
+   {
+    "id": "C1",
+    "title": "Custom allocators, arenas, and object layout in C++ and Rust",
+    "about": "Why general-purpose allocators hurt, and laying memory out on purpose.",
+    "src": "poly"
+   },
+   {
+    "id": "C2",
+    "title": "CPU caches, false sharing, and hardware sympathy",
+    "about": "Cache lines, cores fighting over the same line, and code that suits the hardware.",
+    "src": "poly"
+   },
+   {
+    "id": "C3",
+    "title": "Atomics, memory ordering, and lock-free algorithms",
+    "about": "Why CPUs reorder memory operations, and building data structures without locks.",
+    "src": "poly"
+   },
+   {
+    "id": "C4",
+    "title": "SIMD and vectorization",
+    "about": "Vector instructions, and writing loops a compiler can vectorise.",
+    "src": "poly"
+   },
+   {
+    "id": "C5",
+    "title": "OS-level I/O",
+    "about": "Virtual memory, mmap, and io_uring",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "The same problems in five languages",
+  "about": "Memory, strings, hash tables, errors, concurrency and dispatch, side by side.",
+  "mods": [
+   {
+    "id": "K1",
+    "title": "Memory representation across the 5 languages",
+    "about": "Stack, heap, indirection, and cache locality",
+    "src": "poly"
+   },
+   {
+    "id": "K2",
+    "title": "Strings, UTF-8 vs. UTF-16, and text processing across 5 languages",
+    "about": "How each language stores text, and why indexing a string is harder than it looks.",
+    "src": "poly"
+   },
+   {
+    "id": "K3",
+    "title": "Hash tables and trees across standard libraries",
+    "about": "How each standard library builds maps and trees, and what that costs.",
+    "src": "poly"
+   },
+   {
+    "id": "K4",
+    "title": "Error handling philosophies compared",
+    "about": "Exceptions, Result types, Go-style error values and union types, compared.",
+    "src": "poly"
+   },
+   {
+    "id": "K5",
+    "title": "The 5 Concurrency Models compared",
+    "about": "OS Threads vs. Goroutines vs. Poll Futures vs. Event Loops",
+    "src": "poly"
+   },
+   {
+    "id": "K6",
+    "title": "Polymorphism and dispatch compared",
+    "about": "Vtables, fat pointers, interfaces, duck typing, and generics",
+    "src": "poly"
+   },
+   {
+    "id": "K7",
+    "title": "Parsing, serialization, and schema evolution across languages",
+    "about": "Turning data into bytes and back, and changing a schema without breaking readers.",
+    "src": "poly"
+   },
+   {
+    "id": "K8",
+    "title": "Writing a Lexer, Pratt Parser, and Bytecode Interpreter in your language of choice",
+    "about": "Build a small language end to end, in the language you choose.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Languages calling each other",
+  "about": "The C ABI, FFI between all five languages, and WebAssembly.",
+  "mods": [
+   {
+    "id": "L1",
+    "title": "The Lingua Franca of Systems",
+    "about": "The C ABI, calling conventions, and symbol linking",
+    "src": "poly"
+   },
+   {
+    "id": "L2",
+    "title": "Rust \u2194 C++ interop",
+    "about": "Calling between Rust and C++ safely.",
+    "src": "poly"
+   },
+   {
+    "id": "L3",
+    "title": "Supercharging Python with Rust (PyO3 & maturin) and C++",
+    "about": "Making Python fast by moving hot code into Rust or C++.",
+    "src": "poly"
+   },
+   {
+    "id": "L4",
+    "title": "Go interop (cgo), its hidden scheduler costs, and IPC/gRPC alternatives",
+    "about": "Calling C from Go, what it costs the scheduler, and when to use IPC instead.",
+    "src": "poly"
+   },
+   {
+    "id": "L5",
+    "title": "Native addons for Node.js/TypeScript (N-API / napi-rs) and FFI",
+    "about": "Native modules for Node with N-API and napi-rs, and FFI from JavaScript.",
+    "src": "poly"
+   },
+   {
+    "id": "L6",
+    "title": "WebAssembly (Wasm)",
+    "about": "Compiling Rust, C++, and Go to a universal sandboxed bytecode",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Build, package, test and observe",
+  "about": "Lockfiles, build systems, fuzzing, sanitizers and profiling in every language.",
+  "mods": [
+   {
+    "id": "M1",
+    "title": "Python packaging, lockfiles, and quality gates",
+    "about": "Packaging Python properly, with lockfiles and quality checks.",
+    "src": "poly"
+   },
+   {
+    "id": "M2",
+    "title": "Rust and Go dependency management, workspaces, and supply-chain verification",
+    "about": "Versions, lockfiles, workspaces and checking where dependencies came from.",
+    "src": "poly"
+   },
+   {
+    "id": "M3",
+    "title": "C++ and JS/TS build & bundling systems",
+    "about": "CMake and C++ builds, and bundlers for JavaScript and TypeScript.",
+    "src": "poly"
+   },
+   {
+    "id": "M4",
+    "title": "Testing architectures",
+    "about": "Unit, integration, property-based, fuzzing, and deterministic simulation",
+    "src": "poly"
+   },
+   {
+    "id": "M5",
+    "title": "Memory & concurrency verification",
+    "about": "ASan, UBSan, TSan, Valgrind, and Miri",
+    "src": "poly"
+   },
+   {
+    "id": "M6",
+    "title": "Profiling, flame graphs, and OpenTelemetry across all 5 languages",
+    "about": "Finding where time goes in any of the five languages, and tracing across them.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "part": "The machine and its systems",
+  "name": "Machine and operating system",
+  "about": "Inside a CPU core, the memory hierarchy, processes and the kernel.",
+  "mods": [
+   {
+    "id": "B1",
+    "title": "Inside a CPU core",
+    "about": "Pipelines, caches and branch prediction: what one core does each cycle.",
+    "src": "bits"
+   },
+   {
+    "id": "B2",
+    "title": "The memory hierarchy",
+    "about": "Registers to RAM to disk, and why where data lives decides how fast code runs.",
+    "src": "bits"
+   },
+   {
+    "id": "B3",
+    "title": "The operating system: processes, syscalls and scheduling",
+    "about": "How the kernel starts programs, answers system calls and shares the CPU.",
+    "src": "bits"
+   },
+   {
+    "id": "B4",
+    "title": "Virtual memory",
+    "about": "Page tables, the TLB and page faults: every program's private view of memory.",
+    "src": "bits"
+   },
+   {
+    "id": "B5",
+    "title": "Concurrency and parallelism",
+    "about": "Threads, locks and parallel work, and the bugs that come with them.",
+    "src": "bits"
+   },
+   {
+    "id": "B6",
+    "title": "Memory management in languages",
+    "about": "Manual memory, reference counting and garbage collectors, compared.",
+    "src": "bits"
+   },
+   {
+    "id": "B7",
+    "title": "Storage: disks, filesystems and durability",
+    "about": "How bytes reach a disk, how filesystems organise them, and what fsync really guarantees.",
+    "src": "bits"
+   },
+   {
+    "id": "B8",
+    "title": "Observing the machine: performance engineering and eBPF",
+    "about": "Profilers, flame graphs and eBPF for finding where time actually goes.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Networking and APIs",
+  "about": "From a packet on a wire to HTTP, TLS and the APIs you design.",
+  "mods": [
+   {
+    "id": "C1",
+    "title": "How networks move bytes",
+    "about": "Packets, addresses, routing and DNS: how bytes cross the world.",
+    "src": "bits"
+   },
+   {
+    "id": "C2",
+    "title": "Transport: TCP, UDP, QUIC and sockets",
+    "about": "Reliable streams, datagrams and QUIC, and the socket calls underneath.",
+    "src": "bits"
+   },
+   {
+    "id": "C3",
+    "title": "Cryptography and TLS",
+    "about": "Hashes, keys and signatures, and how a TLS handshake uses them.",
+    "src": "bits"
+   },
+   {
+    "id": "C4",
+    "title": "HTTP and the delivery path",
+    "about": "A request's trip through CDNs, load balancers and proxies to a server and back.",
+    "src": "bits"
+   },
+   {
+    "id": "C5",
+    "title": "API paradigms and contracts",
+    "about": "REST, gRPC, GraphQL and events, and how to keep an API contract stable.",
+    "src": "bits"
+   },
+   {
+    "id": "C6",
+    "title": "Identity, authorization and abuse control",
+    "about": "Logins, tokens, permissions and rate limits that keep abuse out.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Data systems",
+  "about": "How databases store, find and protect data.",
+  "mods": [
+   {
+    "id": "D1",
+    "title": "Relational data and SQL",
+    "about": "Tables, keys, joins and the SQL that queries them.",
+    "src": "bits"
+   },
+   {
+    "id": "D2",
+    "title": "Storage engines",
+    "about": "B-trees and LSM trees: how a database lays data out on disk.",
+    "src": "bits"
+   },
+   {
+    "id": "D3",
+    "title": "Transactions, MVCC and isolation",
+    "about": "How databases keep concurrent changes correct, and what each isolation level allows.",
+    "src": "bits"
+   },
+   {
+    "id": "D4",
+    "title": "Replication and partitioning",
+    "about": "Copying data across machines and splitting it up, and what breaks when links fail.",
+    "src": "bits"
+   },
+   {
+    "id": "D5",
+    "title": "Caching and Redis",
+    "about": "When a cache helps, when it lies, and how Redis works inside.",
+    "src": "bits"
+   },
+   {
+    "id": "D6",
+    "title": "Analytics and data engineering",
+    "about": "Columnar storage, batch and stream processing, and data pipelines.",
+    "src": "bits"
+   },
+   {
+    "id": "D7",
+    "title": "Search and retrieval",
+    "about": "Inverted indexes, ranking and vector search.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Distributed systems",
+  "about": "Many machines agreeing on one answer, and proving that they do.",
+  "mods": [
+   {
+    "id": "E1",
+    "title": "Architecture and traffic",
+    "about": "Splitting a system into services and routing traffic between them.",
+    "src": "bits"
+   },
+   {
+    "id": "E2",
+    "title": "Time, order and failure",
+    "about": "Clocks, ordering and partial failure: what a single computer never has to face.",
+    "src": "bits"
+   },
+   {
+    "id": "E3",
+    "title": "Consensus and coordination",
+    "about": "Paxos, Raft and coordination services: getting machines to agree.",
+    "src": "bits"
+   },
+   {
+    "id": "E4",
+    "title": "Distributed transactions and messaging",
+    "about": "Two-phase commit, sagas, queues and logs for work that spans machines.",
+    "src": "bits"
+   },
+   {
+    "id": "E5",
+    "title": "Resilience under load",
+    "about": "Queues, timeouts, retries, backpressure and load shedding under heavy traffic.",
+    "src": "bits"
+   },
+   {
+    "id": "E6",
+    "title": "Production algorithms and probabilistic structures",
+    "about": "Consistent hashing, Bloom filters, sketches and other tools used in production.",
+    "src": "bits"
+   },
+   {
+    "id": "E7",
+    "title": "Proving distributed code correct",
+    "about": "Model checking and deterministic simulation that find the bugs tests miss.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Cloud and delivery",
+  "about": "Containers, Kubernetes, and getting code out safely.",
+  "mods": [
+   {
+    "id": "F1",
+    "title": "Cloud fundamentals",
+    "about": "Accounts, regions, networks and permissions in a public cloud.",
+    "src": "bits"
+   },
+   {
+    "id": "F2",
+    "title": "Infrastructure as code",
+    "about": "Describing servers and networks in code, and changing them safely.",
+    "src": "bits"
+   },
+   {
+    "id": "F3",
+    "title": "Containers under the hood",
+    "about": "Namespaces, cgroups and images: what a container really is.",
+    "src": "bits"
+   },
+   {
+    "id": "F4",
+    "title": "Kubernetes architecture and workloads",
+    "about": "The control plane, pods and controllers that keep workloads running.",
+    "src": "bits"
+   },
+   {
+    "id": "F5",
+    "title": "Kubernetes networking and service mesh",
+    "about": "How traffic reaches pods, and what a service mesh adds.",
+    "src": "bits"
+   },
+   {
+    "id": "F6",
+    "title": "Configuration with Kustomize",
+    "about": "One service, many environments, without copying configuration.",
+    "src": "bits"
+   },
+   {
+    "id": "F7",
+    "title": "Delivery pipelines, GitOps and `release.yaml`",
+    "about": "Build, test and release pipelines, GitOps, and rolling back.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Reliability and security",
+  "about": "Seeing what a system is doing, surviving incidents, keeping attackers out.",
+  "mods": [
+   {
+    "id": "G1",
+    "title": "Observability and OpenTelemetry",
+    "about": "Metrics, logs and traces, and instrumenting code with OpenTelemetry.",
+    "src": "bits"
+   },
+   {
+    "id": "G2",
+    "title": "Grafana Alloy and the LGTM stack",
+    "about": "Collecting and storing telemetry with an open-source observability stack.",
+    "src": "bits"
+   },
+   {
+    "id": "G3",
+    "title": "SRE practice",
+    "about": "SLOs, error budgets, on-call and learning from incidents.",
+    "src": "bits"
+   },
+   {
+    "id": "G4",
+    "title": "Security engineering",
+    "about": "Threat models, common attacks and the defences that stop them.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "part": "Maths and models",
+  "name": "Math for ML",
+  "about": "The linear algebra, calculus, probability and optimisation models are made of.",
+  "mods": [
+   {
+    "id": "H1",
+    "title": "Linear algebra for ML",
+    "about": "Vectors, matrices and decompositions, seen as the operations models run.",
+    "src": "bits"
+   },
+   {
+    "id": "H2",
+    "title": "Calculus for learning",
+    "about": "Derivatives, gradients and the chain rule that training depends on.",
+    "src": "bits"
+   },
+   {
+    "id": "H3",
+    "title": "Probability and statistics",
+    "about": "Distributions, estimation and uncertainty.",
+    "src": "bits"
+   },
+   {
+    "id": "H4",
+    "title": "Information theory",
+    "about": "Entropy, cross-entropy and KL divergence, the language of loss functions.",
+    "src": "bits"
+   },
+   {
+    "id": "H5",
+    "title": "Numerical computing",
+    "about": "Floating point, stability and doing maths fast on real hardware.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Machine learning and deep learning",
+  "about": "From fitting a line to training deep networks that work.",
+  "mods": [
+   {
+    "id": "I1",
+    "title": "Classical machine learning",
+    "about": "Regression, trees and evaluation: the parts of ML that decide whether it works.",
+    "src": "bits"
+   },
+   {
+    "id": "I2",
+    "title": "Neural networks and backpropagation",
+    "about": "Neurons, layers and backpropagation, built by hand.",
+    "src": "bits"
+   },
+   {
+    "id": "I3",
+    "title": "Optimization algorithms",
+    "about": "Gradient descent, momentum, Adam and learning-rate schedules.",
+    "src": "bits"
+   },
+   {
+    "id": "I4",
+    "title": "Training deep networks in practice",
+    "about": "Initialisation, normalisation, regularisation and debugging a training run.",
+    "src": "bits"
+   },
+   {
+    "id": "I5",
+    "title": "Architectures before transformers",
+    "about": "Convolutional and recurrent networks, and why attention replaced them.",
+    "src": "bits"
+   },
+   {
+    "id": "I6",
+    "title": "Generative models",
+    "about": "Autoencoders, GANs, diffusion and autoregressive models.",
+    "src": "bits"
+   },
+   {
+    "id": "I7",
+    "title": "Frameworks: PyTorch and JAX",
+    "about": "How PyTorch and JAX build and differentiate computations.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Reinforcement learning",
+  "about": "Learning from reward: values, policies and modern methods.",
+  "mods": [
+   {
+    "id": "K1",
+    "title": "RL foundations",
+    "about": "Agents, rewards, states and Markov decision processes.",
+    "src": "bits"
+   },
+   {
+    "id": "K2",
+    "title": "Value-based methods",
+    "about": "Q-learning, DQN and estimating how good a state is.",
+    "src": "bits"
+   },
+   {
+    "id": "K3",
+    "title": "Policy optimization",
+    "about": "Policy gradients, actor-critic and PPO.",
+    "src": "bits"
+   },
+   {
+    "id": "K4",
+    "title": "Advanced RL",
+    "about": "Model-based RL, offline RL and exploration.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "LLM architecture, training and post-training",
+  "about": "Tokens, attention, pretraining, and everything that happens after.",
+  "mods": [
+   {
+    "id": "J1",
+    "title": "Tokenization",
+    "about": "How text becomes tokens, and what byte-pair encoding does.",
+    "src": "bits"
+   },
+   {
+    "id": "J2",
+    "title": "The transformer from first principles",
+    "about": "Embeddings, attention and the decoder block, built from nothing.",
+    "src": "bits"
+   },
+   {
+    "id": "J3",
+    "title": "Modern LLM architectures, 2017 to today",
+    "about": "What changed in LLM architectures since 2017, and why.",
+    "src": "bits"
+   },
+   {
+    "id": "J4",
+    "title": "Scaling laws and compute budgets",
+    "about": "How model size, data and compute trade off before a run starts.",
+    "src": "bits"
+   },
+   {
+    "id": "J5",
+    "title": "Pretraining data",
+    "about": "Collecting, filtering and mixing the text a model learns from.",
+    "src": "bits"
+   },
+   {
+    "id": "J6",
+    "title": "Pretraining runs",
+    "about": "Running pretraining: stability, checkpoints and loss curves.",
+    "src": "bits"
+   },
+   {
+    "id": "J7",
+    "title": "Distributed training systems",
+    "about": "Data, tensor and pipeline parallelism across many GPUs.",
+    "src": "bits"
+   },
+   {
+    "id": "J8",
+    "title": "Mid-training and context extension",
+    "about": "Annealing, long-context training and extending a model's reach.",
+    "src": "bits"
+   },
+   {
+    "id": "J9",
+    "title": "Post-training I: SFT, PEFT and distillation",
+    "about": "Supervised fine-tuning, LoRA-style adapters and distillation.",
+    "src": "bits"
+   },
+   {
+    "id": "J10",
+    "title": "Post-training II: preference optimization and RLHF",
+    "about": "Reward models, RLHF and direct preference optimisation.",
+    "src": "bits"
+   },
+   {
+    "id": "J11",
+    "title": "Post-training III: verifiable rewards, reasoning and agentic RL",
+    "about": "Training with checkable rewards for reasoning and tool use.",
+    "src": "bits"
+   },
+   {
+    "id": "J12",
+    "title": "Evaluating models",
+    "about": "Benchmarks, contamination and measuring what a model can really do.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "GPU computing and inference engineering",
+  "about": "Kernels, memory, and serving a model fast to many people at once.",
+  "mods": [
+   {
+    "id": "L1",
+    "title": "Accelerator hardware",
+    "about": "GPUs and other accelerators: cores, memory and interconnects.",
+    "src": "bits"
+   },
+   {
+    "id": "L2",
+    "title": "GPU programming and kernels",
+    "about": "Writing GPU kernels and making them fast.",
+    "src": "bits"
+   },
+   {
+    "id": "L3",
+    "title": "Performance modeling",
+    "about": "Rooflines and back-of-envelope maths for predicting performance.",
+    "src": "bits"
+   },
+   {
+    "id": "L4",
+    "title": "LLM inference mechanics",
+    "about": "Prefill, decode and the KV cache: how a model answers a request.",
+    "src": "bits"
+   },
+   {
+    "id": "L5",
+    "title": "Inference optimizations",
+    "about": "Batching, quantisation, speculative decoding and attention kernels.",
+    "src": "bits"
+   },
+   {
+    "id": "L6",
+    "title": "Distributed and disaggregated inference",
+    "about": "Splitting inference across GPUs and machines.",
+    "src": "bits"
+   },
+   {
+    "id": "L7",
+    "title": "Engines and the serving stack",
+    "about": "Inference engines, schedulers and the stack that serves a model.",
+    "src": "bits"
+   },
+   {
+    "id": "L8",
+    "title": "Beyond text LLMs",
+    "about": "Serving image, audio and multimodal models.",
+    "src": "bits"
+   },
+   {
+    "id": "L9",
+    "title": "Production AI on Kubernetes",
+    "about": "Running inference services reliably on shared, scarce GPUs.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Applied AI systems",
+  "about": "Retrieval, agents, and running models inside real products.",
+  "mods": [
+   {
+    "id": "M1",
+    "title": "LLM application engineering",
+    "about": "Prompts, structured output, tools and testing LLM features.",
+    "src": "bits"
+   },
+   {
+    "id": "M2",
+    "title": "Retrieval-augmented generation",
+    "about": "Finding the right documents and giving them to a model.",
+    "src": "bits"
+   },
+   {
+    "id": "M3",
+    "title": "Agents and multi-agent systems",
+    "about": "Models that plan, call tools and work together, and how they fail.",
+    "src": "bits"
+   },
+   {
+    "id": "M4",
+    "title": "ML and LLM operations",
+    "about": "Versioning, monitoring and evaluating models in production.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "name": "Safety, security and interpretability",
+  "about": "What goes wrong with models, and how to look inside one.",
+  "mods": [
+   {
+    "id": "N1",
+    "title": "AI security",
+    "about": "Prompt injection, data leaks and attacks on AI systems.",
+    "src": "bits"
+   },
+   {
+    "id": "N2",
+    "title": "Alignment and safety",
+    "about": "Specifying what a model should do and checking that it does.",
+    "src": "bits"
+   },
+   {
+    "id": "N3",
+    "title": "Interpretability",
+    "about": "Looking inside a network to see what it computes.",
+    "src": "bits"
+   }
+  ]
+ },
+ {
+  "part": "Build it all",
+  "name": "Papers lab",
+  "about": "Read a landmark paper with your editor open and build it as you go. The first 40, 2017 to 2026.",
+  "mods": [
+   {
+    "id": "2018",
+    "title": "SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing",
+    "about": "Tokenisation"
+   },
+   {
+    "id": "2018",
+    "title": "Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates",
+    "about": "Tokenisation"
+   },
+   {
+    "id": "2017",
+    "title": "Attention Is All You Need",
+    "about": "Architecture, attention"
+   },
+   {
+    "id": "2018",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "about": "Pretraining, architecture"
+   },
+   {
+    "id": "2020",
+    "title": "Language Models are Few-Shot Learners",
+    "about": "Pretraining, evaluation"
+   },
+   {
+    "id": "2019",
+    "title": "Root Mean Square Layer Normalization",
+    "about": "Architecture, optimisation"
+   },
+   {
+    "id": "2021",
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "about": "Attention, architecture"
+   },
+   {
+    "id": "2017",
+    "title": "Decoupled Weight Decay Regularization",
+    "about": "Optimisation"
+   },
+   {
+    "id": "2017",
+    "title": "Mixed Precision Training",
+    "about": "Optimisation, pretraining"
+   },
+   {
+    "id": "2019",
+    "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+    "about": "Pretraining, architecture"
+   },
+   {
+    "id": "2020",
+    "title": "Scaling Laws for Neural Language Models",
+    "about": "Scaling"
+   },
+   {
+    "id": "2022",
+    "title": "Training Compute-Optimal Large Language Models",
+    "about": "Scaling, pretraining"
+   },
+   {
+    "id": "2019",
+    "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+    "about": "Optimisation, scaling"
+   },
+   {
+    "id": "2021",
+    "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+    "about": "Architecture, scaling"
+   },
+   {
+    "id": "2020",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "about": "Architecture, retrieval"
+   },
+   {
+    "id": "2021",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "about": "Post-training"
+   },
+   {
+    "id": "2017",
+    "title": "Proximal Policy Optimization Algorithms",
+    "about": "RL, optimisation"
+   },
+   {
+    "id": "2022",
+    "title": "Training language models to follow instructions with human feedback",
+    "about": "Post-training, RL"
+   },
+   {
+    "id": "2023",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "about": "Post-training"
+   },
+   {
+    "id": "2022",
+    "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+    "about": "Post-training, data"
+   },
+   {
+    "id": "2023",
+    "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+    "about": "Attention, inference"
+   },
+   {
+    "id": "2022",
+    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "about": "Attention, inference"
+   },
+   {
+    "id": "2022",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "about": "Inference"
+   },
+   {
+    "id": "2023",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "about": "Inference"
+   },
+   {
+    "id": "2022",
+    "title": "Efficiently Scaling Transformer Inference",
+    "about": "Inference, scaling"
+   },
+   {
+    "id": "2022",
+    "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+    "about": "Quantisation, inference"
+   },
+   {
+    "id": "2022",
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "about": "Quantisation"
+   },
+   {
+    "id": "2023",
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "about": "Quantisation, post-training"
+   },
+   {
+    "id": "2024",
+    "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+    "about": "Quantisation, inference"
+   },
+   {
+    "id": "2022",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "about": "Agents"
+   },
+   {
+    "id": "2023",
+    "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "about": "Agents, inference"
+   },
+   {
+    "id": "2023",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "about": "Evaluation, agents"
+   },
+   {
+    "id": "2022",
+    "title": "Holistic Evaluation of Language Models",
+    "about": "Evaluation"
+   },
+   {
+    "id": "2021",
+    "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+    "about": "Evaluation, safety"
+   },
+   {
+    "id": "2020",
+    "title": "RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models",
+    "about": "Evaluation, safety"
+   },
+   {
+    "id": "2022",
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "about": "Safety, post-training"
+   },
+   {
+    "id": "2024",
+    "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+    "about": "Safety, evaluation"
+   },
+   {
+    "id": "2024",
+    "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+    "about": "RL, post-training"
+   },
+   {
+    "id": "2025",
+    "title": "Midtraining Bridges Pretraining and Posttraining Distributions",
+    "about": "Pretraining, post-training"
+   },
+   {
+    "id": "2026",
+    "title": "Attention Residuals",
+    "about": "Attention, architecture"
+   }
+  ]
+ },
+ {
+  "name": "Statechart Studio",
+  "about": "Learn the web by building the tool that draws this site's pictures.",
+  "mods": [
+   {
+    "id": "SC-M0",
+    "title": "Setup, the web, and how to learn",
+    "about": "Explain what happens between typing a URL and seeing a page",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M1",
+    "title": "HTML: structure, meaning, access",
+    "about": "Write a semantic, accessible document by hand",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M2",
+    "title": "CSS: cascade, box model, colour, type",
+    "about": "Predict which rule wins ; size and space things deliberately; set type for reading",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M3",
+    "title": "Layout, responsive design, design systems",
+    "about": "Build layouts that hold at any width; turn a DESIGN.md into CSS",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M4",
+    "title": "Programming fundamentals in JavaScript",
+    "about": "Solve small problems with data and functions",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M5",
+    "title": "The DOM, events, forms, and UI state",
+    "about": "Make a page respond to people without losing track of what state it is in",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M6",
+    "title": "State machines and statecharts",
+    "about": "Model behaviour as states and events; spot impossible states",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M7",
+    "title": "Invariants and model checking",
+    "about": "State rules a system must keep, and find the shortest path that breaks one",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M8",
+    "title": "SVG and Canvas",
+    "about": "Draw anything you can describe with coordinates",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M9",
+    "title": "Procedural drawing: randomness, noise, hand-made texture",
+    "about": "Make drawings that look made by hand and are identical on every run",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M10",
+    "title": "Motion",
+    "about": "Animate to explain, not to decorate",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M11",
+    "title": "Async, modules, tooling, testing, shipping",
+    "about": "Structure a real project and prove it works",
+    "src": "poly"
+   },
+   {
+    "id": "SC-M12",
+    "title": "Graphs, search, and types",
+    "about": "Treat a statechart as a graph and compute things about it",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P1",
+    "title": "Glossary page",
+    "about": "Your first project: one plain, accessible page that defines statechart terms.",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P2",
+    "title": "Themed plate gallery",
+    "about": "The glossary restyled with this site's own design system.",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P3",
+    "title": "Order ticket",
+    "about": "An interactive \"order ticket\" for a caf\u00e9 order",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P4",
+    "title": "Checked machine",
+    "about": "Model SC-P3's behaviour three ways and prove they agree",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P5",
+    "title": "Hand-drawn chart renderer",
+    "about": "A chart file turned into a layout and drawn three ways.",
+    "src": "poly"
+   },
+   {
+    "id": "SC-P6",
+    "title": "Step-through mode",
+    "about": "The chart becomes playable, one step at a time.",
+    "src": "poly"
+   },
+   {
+    "id": "SC-X1",
+    "title": "Statechart Studio",
+    "about": "Write a small state model, see it checked, and get a hand-drawn, playable chart.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Capstones in your languages",
+  "about": "Three systems built end to end in the languages you learned.",
+  "mods": [
+   {
+    "id": "X1",
+    "title": "Single-language mastery",
+    "about": "A concurrent, persistent key-value and pub/sub engine in one language, done properly.",
+    "src": "poly"
+   },
+   {
+    "id": "X2",
+    "title": "High-performance systems",
+    "about": "An in-memory columnar query and vector search engine.",
+    "src": "poly"
+   },
+   {
+    "id": "X3",
+    "title": "Polyglot production pipeline",
+    "about": "An edge-to-core real-time analytics system built across several languages.",
+    "src": "poly"
+   }
+  ]
+ },
+ {
+  "name": "Capstones in AI systems",
+  "about": "Train and serve a small LLM, run Raft, survive an incident drill.",
+  "mods": [
+   {
+    "id": "X1",
+    "title": "Build, train, align and serve a small LLM",
+    "about": "Train a small language model, align it and serve it.",
+    "src": "bits"
+   },
+   {
+    "id": "X2",
+    "title": "A replicated key-value store with Raft",
+    "about": "Build a replicated key-value store on Raft and break it on purpose.",
+    "src": "bits"
+   },
+   {
+    "id": "X3",
+    "title": "Incident drill: a TTFT regression in GPU serving",
+    "about": "Find and fix a time-to-first-token regression in a GPU service.",
+    "src": "bits"
+   }
+  ]
+ }
+]

@@ -1,0 +1,423 @@
+{
+ "width": 1440,
+ "height": 8760,
+ "mode": "day",
+ "bands": [
+  {
+   "part": "Start here",
+   "top": 0,
+   "h": 430,
+   "pass": [
+    892.8,
+    250
+   ]
+  },
+  {
+   "part": "Languages",
+   "top": 956,
+   "h": 600,
+   "pass": [
+    864,
+    1328
+   ]
+  },
+  {
+   "part": "The machine and its systems",
+   "top": 3258,
+   "h": 600,
+   "pass": [
+    792.0000000000001,
+    3630
+   ]
+  },
+  {
+   "part": "Maths and models",
+   "top": 4888,
+   "h": 620,
+   "pass": [
+    835.1999999999999,
+    5272.4
+   ]
+  },
+  {
+   "part": "Build it all",
+   "top": 6706,
+   "h": 600,
+   "pass": [
+    806.4000000000001,
+    7078
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "index": 0,
+   "name": "How to use this",
+   "part": "Start here",
+   "x": 619.2,
+   "y": 500,
+   "side": "left",
+   "emblem": [
+    819.2,
+    500
+   ]
+  },
+  {
+   "index": 1,
+   "name": "Computing foundations",
+   "part": null,
+   "x": 820.8,
+   "y": 668,
+   "side": "right",
+   "emblem": [
+    620.8,
+    668
+   ]
+  },
+  {
+   "index": 2,
+   "name": "CS foundations",
+   "part": null,
+   "x": 619.2,
+   "y": 836,
+   "side": "left",
+   "emblem": [
+    819.2,
+    836
+   ]
+  },
+  {
+   "index": 3,
+   "name": "Python",
+   "part": "Languages",
+   "x": 820.8,
+   "y": 1626,
+   "side": "right",
+   "emblem": [
+    620.8,
+    1626
+   ]
+  },
+  {
+   "index": 4,
+   "name": "JavaScript",
+   "part": null,
+   "x": 619.2,
+   "y": 1794,
+   "side": "left",
+   "emblem": [
+    819.2,
+    1794
+   ]
+  },
+  {
+   "index": 5,
+   "name": "TypeScript",
+   "part": null,
+   "x": 820.8,
+   "y": 1962,
+   "side": "right",
+   "emblem": [
+    620.8,
+    1962
+   ]
+  },
+  {
+   "index": 6,
+   "name": "Go",
+   "part": null,
+   "x": 619.2,
+   "y": 2130,
+   "side": "left",
+   "emblem": [
+    819.2,
+    2130
+   ]
+  },
+  {
+   "index": 7,
+   "name": "Rust",
+   "part": null,
+   "x": 820.8,
+   "y": 2298,
+   "side": "right",
+   "emblem": [
+    620.8,
+    2298
+   ]
+  },
+  {
+   "index": 8,
+   "name": "C++",
+   "part": null,
+   "x": 619.2,
+   "y": 2466,
+   "side": "left",
+   "emblem": [
+    819.2,
+    2466
+   ]
+  },
+  {
+   "index": 9,
+   "name": "Low-level memory, SIMD and lock-free code",
+   "part": null,
+   "x": 820.8,
+   "y": 2634,
+   "side": "right",
+   "emblem": [
+    620.8,
+    2634
+   ]
+  },
+  {
+   "index": 10,
+   "name": "The same problems in five languages",
+   "part": null,
+   "x": 619.2,
+   "y": 2802,
+   "side": "left",
+   "emblem": [
+    819.2,
+    2802
+   ]
+  },
+  {
+   "index": 11,
+   "name": "Languages calling each other",
+   "part": null,
+   "x": 820.8,
+   "y": 2970,
+   "side": "right",
+   "emblem": [
+    620.8,
+    2970
+   ]
+  },
+  {
+   "index": 12,
+   "name": "Build, package, test and observe",
+   "part": null,
+   "x": 619.2,
+   "y": 3138,
+   "side": "left",
+   "emblem": [
+    819.2,
+    3138
+   ]
+  },
+  {
+   "index": 13,
+   "name": "Machine and operating system",
+   "part": "The machine and its systems",
+   "x": 820.8,
+   "y": 3928,
+   "side": "right",
+   "emblem": [
+    620.8,
+    3928
+   ]
+  },
+  {
+   "index": 14,
+   "name": "Networking and APIs",
+   "part": null,
+   "x": 619.2,
+   "y": 4096,
+   "side": "left",
+   "emblem": [
+    819.2,
+    4096
+   ]
+  },
+  {
+   "index": 15,
+   "name": "Data systems",
+   "part": null,
+   "x": 820.8,
+   "y": 4264,
+   "side": "right",
+   "emblem": [
+    620.8,
+    4264
+   ]
+  },
+  {
+   "index": 16,
+   "name": "Distributed systems",
+   "part": null,
+   "x": 619.2,
+   "y": 4432,
+   "side": "left",
+   "emblem": [
+    819.2,
+    4432
+   ]
+  },
+  {
+   "index": 17,
+   "name": "Cloud and delivery",
+   "part": null,
+   "x": 820.8,
+   "y": 4600,
+   "side": "right",
+   "emblem": [
+    620.8,
+    4600
+   ]
+  },
+  {
+   "index": 18,
+   "name": "Reliability and security",
+   "part": null,
+   "x": 619.2,
+   "y": 4768,
+   "side": "left",
+   "emblem": [
+    819.2,
+    4768
+   ]
+  },
+  {
+   "index": 19,
+   "name": "Math for ML",
+   "part": "Maths and models",
+   "x": 820.8,
+   "y": 5578,
+   "side": "right",
+   "emblem": [
+    620.8,
+    5578
+   ]
+  },
+  {
+   "index": 20,
+   "name": "Machine learning and deep learning",
+   "part": null,
+   "x": 619.2,
+   "y": 5746,
+   "side": "left",
+   "emblem": [
+    819.2,
+    5746
+   ]
+  },
+  {
+   "index": 21,
+   "name": "Reinforcement learning",
+   "part": null,
+   "x": 820.8,
+   "y": 5914,
+   "side": "right",
+   "emblem": [
+    620.8,
+    5914
+   ]
+  },
+  {
+   "index": 22,
+   "name": "LLM architecture, training and post-training",
+   "part": null,
+   "x": 619.2,
+   "y": 6082,
+   "side": "left",
+   "emblem": [
+    819.2,
+    6082
+   ]
+  },
+  {
+   "index": 23,
+   "name": "GPU computing and inference engineering",
+   "part": null,
+   "x": 820.8,
+   "y": 6250,
+   "side": "right",
+   "emblem": [
+    620.8,
+    6250
+   ]
+  },
+  {
+   "index": 24,
+   "name": "Applied AI systems",
+   "part": null,
+   "x": 619.2,
+   "y": 6418,
+   "side": "left",
+   "emblem": [
+    819.2,
+    6418
+   ]
+  },
+  {
+   "index": 25,
+   "name": "Safety, security and interpretability",
+   "part": null,
+   "x": 820.8,
+   "y": 6586,
+   "side": "right",
+   "emblem": [
+    620.8,
+    6586
+   ]
+  },
+  {
+   "index": 26,
+   "name": "Papers lab",
+   "part": "Build it all",
+   "x": 619.2,
+   "y": 7376,
+   "side": "left",
+   "emblem": [
+    819.2,
+    7376
+   ]
+  },
+  {
+   "index": 27,
+   "name": "Statechart Studio",
+   "part": null,
+   "x": 820.8,
+   "y": 7544,
+   "side": "right",
+   "emblem": [
+    620.8,
+    7544
+   ]
+  },
+  {
+   "index": 28,
+   "name": "Capstones in your languages",
+   "part": null,
+   "x": 619.2,
+   "y": 7712,
+   "side": "left",
+   "emblem": [
+    819.2,
+    7712
+   ]
+  },
+  {
+   "index": 29,
+   "name": "Capstones in AI systems",
+   "part": null,
+   "x": 820.8,
+   "y": 7880,
+   "side": "right",
+   "emblem": [
+    620.8,
+    7880
+   ]
+  }
+ ],
+ "end": {
+  "top": 8000,
+  "h": 760
+ },
+ "current": {
+  "index": 7,
+  "x": 820.8,
+  "y": 2298
+ }
+}
