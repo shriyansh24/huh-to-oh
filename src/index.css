@@ -1,0 +1,168 @@
+@layer ui-sdk;
+@import "tailwindcss";
+@import "./design/tokens.css";
+
+@import "@fontsource/bricolage-grotesque/latin-400.css";
+@import "@fontsource/bricolage-grotesque/latin-500.css";
+@import "@fontsource/bricolage-grotesque/latin-700.css";
+@import "@fontsource/source-serif-4/latin-400.css";
+@import "@fontsource/source-serif-4/latin-500.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+@import "@fontsource/shantell-sans/latin-700.css";
+
+@custom-variant dark {
+  &:where([data-color-scheme="dark"], [data-color-scheme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where([data-color-scheme="system"], [data-color-scheme="system"] *) {
+      @slot;
+    }
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-now: var(--now);
+  --color-rule: var(--rule);
+  --color-focus: var(--focus);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-reading: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-hand: "Shantell Sans", cursive;
+  --radius-card: var(--r-card);
+  --radius-button: var(--r-button);
+  --radius-pill: var(--r-pill);
+}
+
+:root,
+[data-color-scheme="system"] {
+  color-scheme: light dark;
+}
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.5;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* The day and night drawings are both in the page; CSS shows the one that matches the scheme, so there is no swap flash. */
+[data-color-scheme="dark"] .day-only,
+[data-color-scheme="light"] .night-only {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  [data-color-scheme="system"] .day-only {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+  [data-color-scheme="system"] .night-only {
+    display: none;
+  }
+}
+
+.station-card {
+  box-shadow: 3px 4px 0 var(--shadow);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+.station-card:hover {
+  box-shadow: 5px 6px 0 var(--shadow);
+}
+.station-trigger:focus-visible .station-card,
+.station-trigger[aria-expanded="true"] .station-card {
+  transform: rotate(0deg) !important;
+}
+
+[data-slot="accordion-panel"] {
+  height: var(--accordion-panel-height);
+  overflow: hidden;
+  transition: height 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-slot="accordion-panel"][data-starting-style],
+[data-slot="accordion-panel"][data-ending-style] {
+  height: 0;
+}
+
+[data-slot="dialog-backdrop"] {
+  position: fixed;
+  inset: 0;
+  background: rgb(20 18 14 / 0.45);
+  transition: opacity 180ms ease;
+}
+[data-slot="dialog-backdrop"][data-starting-style],
+[data-slot="dialog-backdrop"][data-ending-style] {
+  opacity: 0;
+}
+[data-slot="dialog-content"] {
+  transition: opacity 180ms ease, transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-slot="dialog-content"][data-starting-style],
+[data-slot="dialog-content"][data-ending-style] {
+  opacity: 0;
+  transform: translate(-50%, -8px);
+}
+[data-slot="command-item"][data-highlighted] {
+  background: var(--bg);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+[data-slot="command-item-text"] mark {
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.row-flash {
+  animation: row-flash 1.6s ease;
+}
+@keyframes row-flash {
+  0%, 40% { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+  100% { background: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-slot="accordion-panel"],
+  [data-slot="dialog-backdrop"],
+  [data-slot="dialog-content"],
+  .station-card { transition: none; }
+  .row-flash { animation: none; outline: 2px solid var(--accent); }
+}
+
+/* Below 900px the absolutely placed cards become one column in reading order, over the drawing. */
+@media (max-width: 899px) {
+  .line-stage { aspect-ratio: auto !important; padding: 24px 0 420px; display: flex; flex-direction: column; gap: 14px; }
+  .line-img { object-fit: cover; object-position: 50% 0; }
+  .line-item { position: relative !important; left: auto !important; top: auto !important; width: auto !important; margin: 0 16px; }
+  .line-head { margin: 28px 16px 4px; padding: 16px; background: var(--sheet); border-radius: var(--r-card); }
+  .line-dot { display: none; }
+}
