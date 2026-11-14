@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { cn } from '../lib/cn'
-import { buttonVariants } from './ui/button'
 
 // Nothing on the line is open yet. These stand in for links and buttons whose pages are still being written:
 // they look like the real control, say "coming soon" out loud, and do nothing when pressed.
@@ -38,5 +37,3 @@ export function Soon({ children, className, stamp = 'inline', stampClassName }: 
     </span>
   )
 }
-
-export const soonButton = (variant: 'solid' | 'outline') => cn(buttonVariants({ variant }), 'hover:brightness-100 hover:bg-transparent')

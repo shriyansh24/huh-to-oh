@@ -13,7 +13,7 @@
     "pretest": "node scripts/tokens.mjs",
     "test": "vitest run",
     "preview": "vite preview",
-    "lint": "oxlint"
+    "lint": "oxlint src test"
   },
   "dependencies": {
     "@fontsource/bricolage-grotesque": "^5.3.0",

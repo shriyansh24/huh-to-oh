@@ -5,6 +5,7 @@ import lostDay from '../assets/lost-day.jpg'
 import lostNight from '../assets/lost-night.jpg'
 import { buttonVariants } from '../components/ui/button'
 import { cn } from '../lib/cn'
+import { homeHref } from './home'
 import { QUOTES } from './quotes'
 import { arch, judge, railPaths, toD, type Pt } from './track'
 
@@ -14,6 +15,8 @@ type Phase = 'idle' | 'drawing' | 'laying' | 'rolling' | 'arrived'
 const G = geometry as unknown as { width: number; height: number; leftTrack: Pt[]; leftEnd: Pt; rightStart: Pt; rightTrack: Pt[] }
 const CAR_GAP = 36
 const CARS = 4
+// Where the train waits: just short of the end of the rails on the near side.
+const PARKED = G.leftTrack.reduce((n, p, i) => (i ? n + Math.hypot(p[0] - G.leftTrack[i - 1][0], p[1] - G.leftTrack[i - 1][1]) : 0), 0) - 14
 
 const ALT =
   'A crayon drawing of a notebook page torn through. A railway runs in from the left past a signpost whose three arrows all point different ways, and stops at the torn edge. Through the tear you can see sky. On the far side the railway carries on up a cut-paper hill to a small town, past a grazing cow.'
@@ -23,15 +26,6 @@ const HINTS = {
   end: 'So close. Carry it all the way to the rails on the far side.',
   short: 'Press and drag across the gap to draw the track.',
 } as const
-
-/** Where the site's home page is: the repo folder on GitHub Pages, the root anywhere else. */
-export function homeHref(loc: Pick<Location, 'hostname' | 'pathname'> = window.location): string {
-  if (loc.hostname.endsWith('github.io')) {
-    const first = loc.pathname.split('/').filter(Boolean)[0]
-    return first ? `/${first}/` : '/'
-  }
-  return '/'
-}
 
 // Walk a polyline by distance: the train's position and heading at `s` units along the route.
 function pointAt(route: Pt[], cum: number[], s: number): { p: Pt; ang: number } {
@@ -51,33 +45,28 @@ export function NotFound() {
   const [bridge, setBridge] = useState<Pt[] | null>(null)
   const [hint, setHint] = useState<string | null>(null)
   const [q, setQ] = useState(() => Math.floor(Math.random() * QUOTES.length))
-  const [s, setS] = useState(0)
+  const [s, setS] = useState(PARKED)
   const home = homeHref()
 
   // The whole route the train can run: the last stretch of rails, the reader's bridge, the far side.
   const route = useMemo<Pt[]>(() => [...G.leftTrack, ...(bridge ? bridge.slice(1, -1) : []), ...(bridge ? G.rightTrack : [])], [bridge])
   const cum = useMemo(() => route.reduce<number[]>((acc, p, i) => (i ? [...acc, acc[i - 1] + Math.hypot(p[0] - route[i - 1][0], p[1] - route[i - 1][1])] : [0]), []), [route])
-  const parked = useMemo(() => {
-    const c = G.leftTrack.reduce((n, p, i) => (i ? n + Math.hypot(p[0] - G.leftTrack[i - 1][0], p[1] - G.leftTrack[i - 1][1]) : 0), 0)
-    return c - 14
-  }, [])
-  useEffect(() => setS(parked), [parked])
 
   // Lay, then roll: a short pause so the reader sees the rails appear, then the train runs to the town.
   useEffect(() => {
     if (phase !== 'laying') return
-    const t = window.setTimeout(() => setPhase('rolling'), reduced ? 0 : 520)
+    const t = window.setTimeout(() => {
+      if (reduced) {
+        setS(cum[cum.length - 1] - 6)
+        setPhase('arrived')
+      } else setPhase('rolling')
+    }, reduced ? 0 : 520)
     return () => window.clearTimeout(t)
-  }, [phase, reduced])
+  }, [phase, reduced, cum])
   useEffect(() => {
     if (phase !== 'rolling') return
     const end = cum[cum.length - 1] - 6
-    if (reduced) {
-      setS(end)
-      setPhase('arrived')
-      return
-    }
-    const start = performance.now(), from = parked, dur = 1400 + (end - from) * 2.4
+    const start = performance.now(), from = PARKED, dur = 1400 + (end - from) * 2.4
     let raf = 0
     const tick = (now: number) => {
       const k = Math.min(1, (now - start) / dur), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2
@@ -87,7 +76,7 @@ export function NotFound() {
     }
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
-  }, [phase, cum, parked, reduced])
+  }, [phase, cum])
 
   const toSvg = (e: PointerEvent): Pt | null => {
     const svg = svgRef.current, m = svg?.getScreenCTM()
@@ -128,7 +117,7 @@ export function NotFound() {
   }
   const again = () => {
     setBridge(null)
-    setS(parked)
+    setS(PARKED)
     setPhase('idle')
   }
 

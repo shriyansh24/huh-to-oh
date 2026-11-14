@@ -1,6 +1,6 @@
 import heroDay from '../assets/page-day.jpg'
 import heroNight from '../assets/page-night.jpg'
-import { Soon, soonButton } from './Soon'
+import { Soon } from './Soon'
 import { ThemeToggle } from './ThemeToggle'
 import { buttonVariants } from './ui/button'
 import { cn } from '../lib/cn'
@@ -43,10 +43,10 @@ export function Hero() {
           Learn how computers work by building them, from one bit to a model in production. Seven languages, the machine underneath, and the systems that train and serve AI. Free, and from scratch.
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-5 pt-1">
-          <Soon stamp="corner" className={soonButton('solid')}>
+          <Soon stamp="corner" className={cn(buttonVariants({ variant: 'solid' }), 'hover:brightness-100')}>
             Start at the bit
           </Soon>
-          <Soon stamp="corner" className={cn(soonButton('outline'), 'border-ink bg-sheet text-ink hover:bg-sheet')}>
+          <Soon stamp="corner" className={cn(buttonVariants({ variant: 'outline' }), 'border-ink bg-sheet text-ink hover:bg-sheet')}>
             Find your station
           </Soon>
         </div>
